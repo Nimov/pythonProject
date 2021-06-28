@@ -11,6 +11,16 @@ def play_with_lists():
     print("4:", mylist[1:])
     print("5:", mylist[1::2])
 
+def play_with_strings():
+    print("Name: %s\nNumber: %s\nString: %s" % ("Nimov", 3, 3 * "-"))
+
+    # WARNING: Watch out for the trailing s in "%(key)s".
+    print("This %(verb)s a %(noun)s." % {"noun": "test", "verb": "is"})
+
+    name = "Nimov"
+    "Hello, {}!".format(name)
+    print(f"Hello, {name}!")
+
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
@@ -20,4 +30,6 @@ def print_hi(name):
 if __name__ == '__main__':
     print_hi('PyCharm')
     play_with_lists()
+    play_with_strings()
+
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
