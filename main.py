@@ -1,4 +1,5 @@
 # This is a sample Python script.
+import random
 
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
@@ -89,6 +90,12 @@ def playing_with_exceptions():
         # if a new exception is raised while handling.
         print("We're done with that.")
 
+
+def playing_with_import():
+    randomint = random.randint(1, 100)
+    print(randomint)
+
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
@@ -103,5 +110,6 @@ if __name__ == '__main__':
     print(my_list)
     print(my_int)
     playing_with_exceptions()
+    playing_with_import()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
