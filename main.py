@@ -21,6 +21,41 @@ def play_with_strings():
     "Hello, {}!".format(name)
     print(f"Hello, {name}!")
 
+def play_with_loops():
+    print(range(10))
+    rangelist = list(range(10))
+    print(rangelist)
+
+    for number in range(10):
+        # Check if number is one of
+        # the numbers in the tuple.
+        if number in (3, 4, 7, 9):
+            # "Break" terminates a for without
+            # executing the "else" clause.
+            print("Just before a break")
+            break
+        else:
+            # "Continue" starts the next iteration
+            # of the loop. It's rather useless here,
+            # as it's the last statement of the loop.
+            print("No break here")
+            continue
+    else:
+        # The "else" clause is optional and is
+        # executed only if the loop didn't "break".
+        print("Do nothing")
+        pass  # Do nothing
+
+    if rangelist[1] == 1:
+        print("The second item (lists are 0-based) is 1")
+    elif rangelist[1] == 3:
+        print("The second item (lists are 0-based) is 3")
+    else:
+        print("Dunno")
+
+    #while rangelist[1] == 1:
+    #    print("We are trapped in an infinite loop!")
+
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
@@ -31,5 +66,6 @@ if __name__ == '__main__':
     print_hi('PyCharm')
     play_with_lists()
     play_with_strings()
+    play_with_loops()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
