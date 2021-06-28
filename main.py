@@ -74,6 +74,21 @@ def passing_example(a_list, an_int=2, a_string="A default string"):
     return a_list, an_int, a_string
 
 
+def playing_with_exceptions():
+    try:
+        # Division by zero raises an exception
+        10 / 0
+    except ZeroDivisionError:
+        print("Oops, invalid.")
+    else:
+        # Exception didn't occur, we're good.
+        pass
+    finally:
+        # This is executed after the code block is run
+        # and all exceptions have been handled, even
+        # if a new exception is raised while handling.
+        print("We're done with that.")
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
@@ -87,5 +102,6 @@ if __name__ == '__main__':
     print(passing_example(my_list, my_int))
     print(my_list)
     print(my_int)
+    playing_with_exceptions()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
