@@ -3,6 +3,11 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
+def print_hi(name):
+    # Use a breakpoint in the code line below to debug your script.
+    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+
+
 def play_with_lists():
     mylist = [1, 2, 3, 4, 5, 6, 7, "osiem"]
     print("1:", mylist[:])
@@ -10,6 +15,7 @@ def play_with_lists():
     print("3:", mylist[-4:-1])
     print("4:", mylist[1:])
     print("5:", mylist[1::2])
+
 
 def play_with_strings():
     print("Name: %s\nNumber: %s\nString: %s" % ("Nimov", 3, 3 * "-"))
@@ -20,6 +26,7 @@ def play_with_strings():
     name = "Nimov"
     "Hello, {}!".format(name)
     print(f"Hello, {name}!")
+
 
 def play_with_loops():
     print(range(10))
@@ -53,12 +60,18 @@ def play_with_loops():
     else:
         print("Dunno")
 
-    #while rangelist[1] == 1:
-    #    print("We are trapped in an infinite loop!")
+#    while rangelist[1] == 1:
+#        print("We are trapped in an infinite loop!")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+
+# Same as def funcvar(x): return x + 1
+funcvar = lambda x: x + 1
+
+
+def passing_example(a_list, an_int=2, a_string="A default string"):
+    a_list.append("A new item")
+    an_int = 4
+    return a_list, an_int, a_string
 
 
 # Press the green button in the gutter to run the script.
@@ -67,5 +80,12 @@ if __name__ == '__main__':
     play_with_lists()
     play_with_strings()
     play_with_loops()
+    # playing with functions
+    print(funcvar(4))
+    my_list = [1, 2, 3]
+    my_int = 10
+    print(passing_example(my_list, my_int))
+    print(my_list)
+    print(my_int)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
